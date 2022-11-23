@@ -1,0 +1,11 @@
+{
+  "id": "fabric_essentials",
+  "minversion": 202200200000,
+  "weight": 3000,
+  "info": {
+    "name": "Fabric Essentials",
+    "version": "1.0",
+    "description": "Ports forge features to fabric",
+    "author": "NerdyPuzzle, Kleiders"
+  }
+}

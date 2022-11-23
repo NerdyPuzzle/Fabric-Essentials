@@ -1,0 +1,14 @@
+---
+fabric-1.19.2:
+  gradle: |
+      repositories {
+        maven { url = "https://mvn.devos.one/snapshots/" }
+        maven { url 'https://jitpack.io' }
+      }
+      
+      dependencies {
+        modImplementation(include("io.github.fabricators_of_create.Porting-Lib:base:2.0.615+1.19.2"))
+      }
+  update_files:
+    - ~
+name: "Fabric Essentials API (Porting-Lib)"

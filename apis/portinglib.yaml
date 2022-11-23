@@ -9,6 +9,10 @@ fabric-1.19.2:
       dependencies {
         modImplementation(include("io.github.fabricators_of_create.Porting-Lib:base:2.0.616+1.19.2"))
       }
+      
+      loom {
+        accessWidenerPath = file("src/main/resources/.accesswidener")
+      }
   update_files:
     - ~
 name: "Fabric Essentials API (Porting-Lib)"

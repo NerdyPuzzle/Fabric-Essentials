@@ -9,7 +9,7 @@ public ${name}Procedure() {
 			dependencies.put("pz", event.getPlayer().getZ());
 			dependencies.put("blockstate", event.getState());
 			dependencies.put("xpAmount", event.getExpToDrop());
-			dependencies.put("world", event.getPlayer().level);
+			dependencies.put("world", event.getWorld());
 			dependencies.put("entity", event.getPlayer());
 			dependencies.put("event", event);
 			execute(dependencies);

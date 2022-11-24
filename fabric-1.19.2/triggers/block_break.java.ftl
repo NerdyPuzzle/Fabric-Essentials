@@ -11,6 +11,7 @@ public ${name}Procedure() {
 			dependencies.put("xpAmount", event.getExpToDrop());
 			dependencies.put("world", event.getPlayer().level);
 			dependencies.put("entity", event.getPlayer());
+			dependencies.put("event", event);
 			execute(dependencies);
 	});
 }

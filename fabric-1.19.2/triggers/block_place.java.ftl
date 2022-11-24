@@ -12,7 +12,9 @@ public ${name}Procedure() {
 			dependencies.put("blockstate", (((BlockItem) event.getItemInHand().getItem()).getBlock().defaultBlockState()));
 			dependencies.put("placedagainst", (event.getLevel().getBlockState(event.getHitResult().getBlockPos())));
 			dependencies.put("event", event);
-			execute(dependencies);
+			Executors.newScheduledThreadPool(Runtime.getRuntime().availableProcessors()).schedule(() -> {
+                execute(dependencies);
+            }, 1, TimeUnit.MILLISECONDS);
 			return InteractionResult.PASS;
 	});
 }

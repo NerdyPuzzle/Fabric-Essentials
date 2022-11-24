@@ -1,0 +1,22 @@
+{
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "cval",
+      "check": "Number"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 74,
+  "mcreator": {
+    "toolbox_id": "fabricessentials",
+    "toolbox_init": [
+      "<value name=\"cval\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value>"
+    ],
+ "inputs": [
+      "cval"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+entity dies global trigger

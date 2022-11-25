@@ -21,7 +21,7 @@
 <#if settings.getModPicture()?has_content>
   "icon": "assets/${modid}/icon.png",
 </#if>
-	"accessWidener" : "${modid}.accesswidener",
+  "accessWidener" : "${modid}.accesswidener",
   "environment": "*",
   "entrypoints": {
 	"main": [

@@ -11,7 +11,7 @@ fabric-1.19.2:
       }
       
       loom {
-        accessWidenerPath = file("src/main/resources/@modid.accesswidener")
+        accessWidenerPath = file("src/main/resources/" + archivesBaseName + ".accesswidener")
       }
   update_files:
     - ~

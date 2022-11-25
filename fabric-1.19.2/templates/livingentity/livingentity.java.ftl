@@ -141,13 +141,31 @@ public class ${name}Entity extends ${extendsClass} <#if data.ranged && !settings
 		</#if>
 	}
 
-	<#if settings.getMCreatorDependencies().contains("geckolib") && extendsClass != "Monster">
-	@Override
-    public void aiStep() {
-       this.updateSwingTime();
-       super.aiStep();
-    }
+    <#if settings.getMCreatorDependencies().contains("geckolib") && extendsClass != "Monster">
+    	@Override
     </#if>
+    <#if data.flyingMob || data.spawnParticles || settings.getMCreatorDependencies().contains("geckolib") && extendsClass != "Monster">
+        public void aiStep() {
+        super.aiStep();
+        <#if settings.getMCreatorDependencies().contains("geckolib") && extendsClass != "Monster">
+        this.updateSwingTime();
+        </#if>
+		<#if data.flyingMob>
+		this.setNoGravity(true);
+		</#if>
+		<#if data.spawnParticles>
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level;
+		<#if hasProcedure(data.particleCondition)>
+			if(<@procedureOBJToConditionCode data.particleCondition/>)
+		</#if>
+		<@particles data.particleSpawningShape data.particleToSpawn data.particleSpawningRadious data.particleAmount/>
+		</#if>
+        }
+        </#if>
 
 	<#if data.flyingMob>
 	@Override protected PathNavigation createNavigation(Level world) {
@@ -166,7 +184,6 @@ public class ${name}Entity extends ${extendsClass} <#if data.ranged && !settings
 		<#if aicode??>
 			${aicode}
 		</#if>
-
 	<#if data.ranged>
             this.goalSelector.addGoal(1, new RangedAttackGoal(this, 1.25, 20, 10) {
 				@Override public boolean canContinueToUse() {
@@ -536,7 +553,19 @@ public class ${name}Entity extends ${extendsClass} <#if data.ranged && !settings
 		<@procedureOBJToCode data.onPlayerCollidesWith/>
 	}
 	</#if>
-	
+
+	<#if data.breedable>
+		@Override public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
+			${name}Entity retval = ${JavaModName}Entities.${data.getModElement().getRegistryNameUpper()}.create(serverWorld);
+			retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null, null);
+			return retval;
+		}
+
+		@Override public boolean isFood(ItemStack stack) {
+			return List.of(<#list data.breedTriggerItems as breedTriggerItem>${mappedMCItemToItem(breedTriggerItem)}<#if breedTriggerItem?has_next>,</#if></#list>).contains(stack.getItem());
+		}
+	</#if>
+
 	<#if data.ranged>
 	    @Override public void performRangedAttack(LivingEntity target, float flval) {
 			<#if data.rangedItemType == "Default item">
@@ -555,18 +584,6 @@ public class ${name}Entity extends ${extendsClass} <#if data.ranged && !settings
 			</#if>
 		}
     </#if>
-
-	<#if data.breedable>
-		@Override public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
-			${name}Entity retval = ${JavaModName}Entities.${data.getModElement().getRegistryNameUpper()}.create(serverWorld);
-			retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null, null);
-			return retval;
-		}
-
-		@Override public boolean isFood(ItemStack stack) {
-			return List.of(<#list data.breedTriggerItems as breedTriggerItem>${mappedMCItemToItem(breedTriggerItem)}<#if breedTriggerItem?has_next>,</#if></#list>).contains(stack.getItem());
-		}
-	</#if>
 
 	<#if data.waterMob>
 	@Override public boolean canBreatheUnderwater() {
@@ -670,28 +687,6 @@ public class ${name}Entity extends ${extendsClass} <#if data.ranged && !settings
 
    	@Override public void setNoGravity(boolean ignored) {
 		super.setNoGravity(true);
-	}
-	</#if>
-
-	<#if data.spawnParticles || data.flyingMob>
-	public void aiStep() {
-		super.aiStep();
-
-		<#if data.flyingMob>
-		this.setNoGravity(true);
-		</#if>
-
-		<#if data.spawnParticles>
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-		Entity entity = this;
-		Level world = this.level;
-		<#if hasProcedure(data.particleCondition)>
-			if(<@procedureOBJToConditionCode data.particleCondition/>)
-		</#if>
-		<@particles data.particleSpawningShape data.particleToSpawn data.particleSpawningRadious data.particleAmount/>
-		</#if>
 	}
 	</#if>
 

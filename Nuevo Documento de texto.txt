@@ -1,1 +1,2 @@
 entity dies global trigger
+living entity template

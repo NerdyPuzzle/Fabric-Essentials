@@ -7,7 +7,7 @@ fabric-1.19.2:
       }
       
       dependencies {
-        modImplementation(include("io.github.fabricators_of_create.Porting-Lib:base:2.0.617+1.19.2"))
+        modImplementation(include("io.github.fabricators_of_create.Porting-Lib:base:2.0.620+1.19.2"))
       }
       
       loom {

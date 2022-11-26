@@ -1,0 +1,93 @@
+{
+"args0": [
+   {
+       "type":"field_dropdown",
+       "name":"attribute",
+       "options": [
+       [
+           "Max Health",
+           "net.minecraft.world.entity.ai.attributes.Attributes.MAX_HEALTH"
+       ],
+       [
+           "Armor",
+           "net.minecraft.world.entity.ai.attributes.Attributes.ARMOR"
+       ],
+       [
+           "Armor Toughness",
+           "net.minecraft.world.entity.ai.attributes.Attributes.ARMOR_TOUGHNESS"
+       ],
+       [
+           "Attack Damage",
+           "net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE"
+       ],
+       [
+           "Attack Speed",
+           "net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_SPEED"
+       ],
+       [
+           "Knockback Resistance",
+           "net.minecraft.world.entity.ai.attributes.Attributes.KNOCKBACK_RESISTANCE"
+       ],
+       [
+           "Follow Range",
+           "net.minecraft.world.entity.ai.attributes.Attributes.FOLLOW_RANGE"
+       ],
+       [
+           "Movement Speed",
+           "net.minecraft.world.entity.ai.attributes.Attributes.MOVEMENT_SPEED"
+       ],
+       [
+           "Luck",
+           "net.minecraft.world.entity.ai.attributes.Attributes.LUCK"
+       ],
+       [
+           "Step Height Addition",
+           "PortingLibAttributes.STEP_HEIGHT_ADDITION"
+       ],
+       [
+           "Gravity",
+           "PortingLibAttributes.ENTITY_GRAVITY"
+       ],
+       [
+           "Swim Speed",
+           "PortingLibAttributes.SWIM_SPEED"
+       ]
+       ]
+   },
+   {
+       "type":"input_value",
+       "name":"entity",
+       "check":"Entity"
+   },
+   {
+       "type":"input_value",
+       "name":"value",
+       "check":"Number"
+   }
+],
+"inputsInline": true,
+"previousStatement": null,
+"nextStatement": false,
+"colour": 87,
+"extensions": [
+],
+"mcreator": {
+   "toolbox_id": "fabricessentials",
+   "toolbox_init": [
+       "<value name=\"entity\"><block type=\"entity_from_deps\"></block></value>",
+       "<value name=\"value\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value>"   ],
+   "fields": [
+       "attribute"
+   ],
+   "inputs": [
+       "entity",
+       "value"
+   ],
+   "dependencies": [
+       {
+           "type": "entity",
+           "name": "entity"
+       }
+   ]
+}
+}

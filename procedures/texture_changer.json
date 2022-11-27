@@ -1,0 +1,36 @@
+{
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "texturetochange",
+      "check": "String"
+    },
+	{
+      "type": "input_value",
+      "name": "newtexture",
+      "check": "String"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": "#2d76d6",
+  "mcreator": {
+    "toolbox_id": "fabricessentials",
+    "toolbox_init": [
+      "<value name=\"texturetochange\"><block type=\"text\"><field name=\"TEXT\">minecraft:textures/gui/icons.png</field></block></value>",
+	  "<value name=\"newtexture\"><block type=\"text\"><field name=\"TEXT\">YOUR_MOD_ID:textures/LOCATION/NAME.png</field></block></value>"
+    ],
+    "inputs": [
+      "texturetochange",
+	  "newtexture"
+    ],
+    "dependencies": [
+	      {
+        "name": "world",
+        "type": "world"
+      }
+    ]
+
+  }
+}

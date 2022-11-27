@@ -60,8 +60,6 @@ base_templates:
 - template: modbase/.accesswidener.ftl
   writer: file
   name: "@RESROOT/@modid.accesswidener"
-- template: modbase/implementedinventory.java.ftl
-  name: "@SRCROOT/@BASEPACKAGEPATH/interface/ImplementedInventory.java"
 
 sources_setup_tasks:
   - task: copy_models

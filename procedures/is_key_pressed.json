@@ -1,0 +1,31 @@
+{
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "key",
+      "options": [
+        [
+          "Shift",
+          "Shift"
+        ],
+        [
+          "Alt",
+          "Alt"
+        ],
+        [
+          "Control",
+          "Control"
+        ]
+      ]
+    }
+  ],
+  "inputsInline": true,
+  "output": "Boolean",
+  "colour": "65",
+  "mcreator": {
+    "toolbox_id": "fabricessentials",
+    "fields": [
+      "key"
+    ]
+  }
+}

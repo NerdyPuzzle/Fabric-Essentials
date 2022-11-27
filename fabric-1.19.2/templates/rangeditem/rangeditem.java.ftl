@@ -100,9 +100,10 @@ public class ${name}Item extends Item <#if hasProcedure(data.onEntitySwing)>impl
 	</#if>
 
 	<#if data.shootConstantly>
-		@Override public void onUsingTick(ItemStack itemstack, LivingEntity entityLiving, int count) {
-			Level world = entityLiving.level;
-			if (!world.isClientSide() && entityLiving instanceof ServerPlayer entity) {
+		@Override
+		public void onUseTick(Level level, LivingEntity livingEntity, ItemStack itemstack, int i) {
+			Level world = livingEntity.level;
+			if (!world.isClientSide() && livingEntity instanceof ServerPlayer entity) {
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();

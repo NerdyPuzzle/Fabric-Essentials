@@ -1,3 +1,6 @@
 entity dies global trigger
 living entity template
 armor tick procedures
+mixins.json.ftl
+fishhookmixin.java.ftl
+fishhookrenderermixin.java.ftl

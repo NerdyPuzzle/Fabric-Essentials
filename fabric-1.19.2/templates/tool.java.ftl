@@ -32,7 +32,7 @@ import net.fabricmc.api.Environment;
 <#compress>
 <#if data.toolType == "Pickaxe" || data.toolType == "Axe" || data.toolType == "Sword" || data.toolType == "Spade"
 		|| data.toolType == "Hoe" || data.toolType == "Shears" || data.toolType == "MultiTool">
-public class ${name}Item extends ${data.toolType?replace("Spade", "Shovel")?replace("MultiTool", "Tiered")}Item {
+public class ${name}Item extends ${data.toolType?replace("Spade", "Shovel")?replace("MultiTool", "Tiered")}Item <#if hasProcedure(data.onEntitySwing)>implements EntitySwingListenerItem</#if> {
 	public ${name}Item () {
 		super(<#if data.toolType == "Pickaxe" || data.toolType == "Axe" || data.toolType == "Sword"
 				|| data.toolType == "Spade" || data.toolType == "Hoe" || data.toolType == "MultiTool">
@@ -199,7 +199,7 @@ public class ${name}Item extends ${data.toolType?replace("Spade", "Shovel")?repl
 
 }
 <#elseif data.toolType=="Special">
-public class ${name}Item extends Item {
+public class ${name}Item extends Item <#if hasProcedure(data.onEntitySwing)>implements EntitySwingListenerItem</#if> {
 
 	public ${name}Item() {
 		super(new Item.Properties()
@@ -263,7 +263,7 @@ public class ${name}Item extends Item {
 	<@commonMethods/>
 }
 <#elseif data.toolType=="Fishing rod">
-public class ${name}Item extends FishingRodItem {
+public class ${name}Item extends FishingRodItem <#if hasProcedure(data.onEntitySwing)>implements EntitySwingListenerItem</#if> {
 
 	public ${name}Item() {
 		super(new Item.Properties()

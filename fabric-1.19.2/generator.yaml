@@ -57,6 +57,10 @@ base_templates:
 - template: elementinits/sounds.java.ftl
   name: "@SRCROOT/@BASEPACKAGEPATH/init/@JavaModNameSounds.java"
   condition: hasSounds()
+- template: modbase/mixins.json.ftl
+  writer: file
+  name: "@RESROOT/@modid.mixins.json"
+  condition: ${w.hasToolsOfType("Fishing rod")}
 - template: modbase/.accesswidener.ftl
   writer: file
   name: "@RESROOT/@modid.accesswidener"

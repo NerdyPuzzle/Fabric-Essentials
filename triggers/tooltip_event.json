@@ -1,8 +1,12 @@
 {
   "dependencies_provided": [
-{
+    {
       "name": "itemstack",
       "type": "itemstack"
+    },
+    {
+      "name": "entity",
+      "type": "entity"
     },
     {
       "name": "tooltip",

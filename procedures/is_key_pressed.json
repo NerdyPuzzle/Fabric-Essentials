@@ -23,7 +23,7 @@
   "output": "Boolean",
   "colour": "65",
   "mcreator": {
-    "toolbox_id": "fabricessentials",
+    "toolbox_id": "itemtooltips",
     "fields": [
       "key"
     ]

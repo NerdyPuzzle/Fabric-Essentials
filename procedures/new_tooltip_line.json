@@ -11,7 +11,7 @@
   "nextStatement": null,
   "colour": "72",
   "mcreator": {
-    "toolbox_id": "fabricessentials",
+    "toolbox_id": "itemtooltips",
     "toolbox_init": [
       "<value name=\"tooltiptext\"><block type=\"text\"><field name=\"TEXT\">tooltip</field></block></value>"
     ],

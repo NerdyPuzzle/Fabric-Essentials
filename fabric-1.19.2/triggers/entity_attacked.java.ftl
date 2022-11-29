@@ -3,7 +3,7 @@ public ${name}Procedure() {
 		Map<String, Object> dependencies = new HashMap<>();
 		dependencies.put("entity", entity);
 		dependencies.put("immediatesourceentity", source.getDirectEntity());
-		dependencies.put("sourceentity", source);
+		dependencies.put("sourceentity", source.getEntity());
 		dependencies.put("amount", amount);
 		dependencies.put("x", entity.getX());
 		dependencies.put("y", entity.getY());

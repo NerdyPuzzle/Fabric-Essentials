@@ -13,3 +13,4 @@ block.java.ftl (Unless other changes are made to them)
 block.definition.yaml (Unless other changes are made to them)
 All Projectile Procedures.java.ftl
 projectiles.yaml
+biome definition

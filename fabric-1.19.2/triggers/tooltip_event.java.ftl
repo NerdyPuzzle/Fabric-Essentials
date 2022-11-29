@@ -3,6 +3,7 @@ public ${name}Procedure() {
 		Map<String, Object> dependencies = new HashMap<>();
 		dependencies.put("itemstack", stack);
 		dependencies.put("tooltip", lines);
+		dependencies.put("entity", Minecraft.getInstance().player);
 		execute(dependencies);
 	});
 }

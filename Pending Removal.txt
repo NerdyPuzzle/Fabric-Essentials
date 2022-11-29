@@ -1,4 +1,6 @@
-entity dies global trigger
+entity dies global trigger (Do not remove yet)
+entity attacked global trigger
+entity hurt global trigger
 living entity template
 armor tick procedures
 mixins.json.ftl
@@ -16,3 +18,4 @@ projectiles.yaml
 biome definition
 player_left_click_block.java.ftl
 player_right_click_block.java.ftl
+entity local variables

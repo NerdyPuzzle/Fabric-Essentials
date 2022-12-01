@@ -66,6 +66,7 @@ public class ${JavaModName} implements ModInitializer {
 		<#if w.hasSounds()>${JavaModName}Sounds.load();</#if>
 		<#if w.hasVariablesOfScope("GLOBAL_WORLD") || w.hasVariablesOfScope("GLOBAL_MAP")>{JavaModName}Variables.SyncJoin();</#if>
 		<#if w.hasVariablesOfScope("GLOBAL_WORLD") || w.hasVariablesOfScope("GLOBAL_MAP")>{JavaModName}Variables.SyncChangeWorld();</#if>
+		<#if settings.getMCreatorDependencies().contains("geckolib")>GeckoLib.initialize();</#if>
 	}
 }
 <#-- @formatter:on -->

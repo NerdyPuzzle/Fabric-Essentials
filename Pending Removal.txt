@@ -14,3 +14,4 @@ Global Variables and all variables
 End biomes
 Entity inv get/set procedures
 chat_sent / command_executed triggers
+player joins/leaves world triggers

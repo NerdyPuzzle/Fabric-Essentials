@@ -12,3 +12,5 @@ player_left_click_block.java.ftl
 player_right_click_block.java.ftl
 Global Variables and all variables
 End biomes
+Entity inv get/set procedures
+chat_sent / command_executed triggers

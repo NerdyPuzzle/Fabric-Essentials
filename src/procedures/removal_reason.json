@@ -1,0 +1,45 @@
+{
+  "args0": [
+    {
+    "type": "field_dropdown",
+    "name": "reason",
+    "options": [
+     [
+      "KILLED",
+      "KILLED"
+     ],
+     [
+      "DESPAWNED",
+      "DISCARDED"
+     ],
+     [
+      "UNLOADED_WITH_CHUNK",
+      "UNLOADED_TO_CHUNK"
+     ],
+     [
+      "UNLOADED_WITH_PLAYER",
+      "UNLOADED_TO_PLAYER"
+     ],
+     [
+      "CHANGED_DIMENSION",
+      "CHANGED_DIMENSION"
+     ]
+    ]
+    }
+  ],
+  "inputsInline": true,
+  "output": "Boolean",
+  "colour": 253,
+  "mcreator": {
+    "toolbox_id": "fabricessentials",
+    "dependencies": [
+  {
+    "name": "removalreason",
+    "type": "removalreason"
+  }
+],
+    "fields": [
+      "reason"
+]
+  }
+}

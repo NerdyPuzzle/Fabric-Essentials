@@ -6,6 +6,7 @@ public ${name}Procedure() {
 		dependencies.put("y", entity.getY());
 		dependencies.put("z", entity.getZ());
 		dependencies.put("world", entity.level);
+		dependencies.put("removalreason", reason);
 		execute(dependencies);
 	});
 }

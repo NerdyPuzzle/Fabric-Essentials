@@ -10,4 +10,4 @@ block.java.ftl (Unless other changes are made to them)
 block.definition.yaml (Unless other changes are made to them)
 player_left_click_block.java.ftl
 player_right_click_block.java.ftl
-entity local variables
+Global Variables and all variables

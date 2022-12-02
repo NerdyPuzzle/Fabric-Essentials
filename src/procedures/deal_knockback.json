@@ -1,0 +1,42 @@
+{
+ "args0": [
+    {
+     "type": "input_value",
+     "name": "xk",
+     "check": "Number"
+    },
+    {
+     "type": "input_value",
+     "name": "yk",
+     "check": "Number"
+    },
+    {
+     "type": "input_value",
+     "name": "zk",
+     "check": "Number"
+    },
+    {
+     "type": "input_value",
+     "name": "entity",
+     "check": "Entity"
+    }
+],
+   "inputsInline": true,
+   "previousStatement": null,
+   "colour": 367,
+   "mcreator": {
+     "toolbox_id": "fabricessentials",
+     "toolbox_init": [
+       "<value name=\"xk\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value>",
+       "<value name=\"yk\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value>",
+       "<value name=\"zk\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value>",
+       "<value name=\"entity\"><block type=\"entity_from_deps\"></block></value>"
+],
+  "inputs": [
+    "xk",
+    "yk",
+    "zk",
+    "entity"
+   ]
+  }
+}

@@ -1,0 +1,87 @@
+{
+ "args0": [
+    {
+     "type": "field_dropdown",
+     "name": "pose",
+     "options": [
+       [
+         "STANDING",
+         "STANDING"
+       ],
+       [
+         "FALL_FLYING",
+         "FALL_FLYING"
+       ],
+       [
+         "SLEEPING",
+         "SLEEPING"
+       ],
+       [
+         "SWIMMING",
+         "SWIMMING"
+       ],
+       [
+         "SPIN_ATTACK",
+         "SPIN_ATTACK"
+       ],
+       [
+         "CROUCHING",
+         "CROUCHING"
+       ],
+       [
+         "LONG_JUMPING",
+         "LONG_JUMPING"
+       ],
+       [
+         "DYING",
+         "DYING"
+       ],
+       [
+         "CROAKING",
+         "CROAKING"
+       ],
+       [
+         "USING_TONGUE",
+         "USING_TONGUE"
+       ],
+       [
+         "ROARING",
+         "ROARING"
+       ],
+       [
+         "SNIFFING",
+         "SNIFFING"
+       ],
+       [
+         "EMERGING",
+         "EMERGING"
+       ],
+       [
+         "DIGGING",
+         "DIGGING"
+       ]
+     ]
+    },
+    {
+     "type": "input_value",
+     "name": "entity",
+     "check": "Entity"
+    }
+],
+   "inputsInline": true,
+   "previousStatement": null,
+   "nextStatement": null,
+   "colour": 633,
+   "mcreator": {
+     "toolbox_id": "fabricessentials",
+     "toolbox_init": [
+       "<value name=\"entity\"><block type=\"entity_from_deps\"></block></value>"
+],
+  "fields": [
+    "pose"
+  ],
+  "inputs": [
+    "entity"
+   ]
+  }
+}

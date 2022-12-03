@@ -1,0 +1,28 @@
+{
+ "args0": [
+    {
+     "type": "input_value",
+     "name": "entity",
+     "check": "Entity"
+    },
+    {
+     "type": "input_value",
+     "name": "amount",
+     "check": "Number"
+    }
+],
+   "inputsInline": true,
+   "previousStatement": null,
+   "colour": 367,
+   "mcreator": {
+     "toolbox_id": "fabricessentials",
+     "toolbox_init": [
+       "<value name=\"entity\"><block type=\"entity_from_deps\"></block></value>",
+       "<value name=\"amount\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value>"
+],
+  "inputs": [
+    "entity",
+    "amount"
+   ]
+  }
+}

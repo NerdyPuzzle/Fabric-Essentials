@@ -15,3 +15,4 @@ End biomes
 Entity inv get/set procedures
 chat_sent / command_executed triggers
 player joins/leaves world triggers
+world_send_chat.java.ftl

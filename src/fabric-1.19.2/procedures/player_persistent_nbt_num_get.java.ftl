@@ -1,0 +1,1 @@
+(${input$entity}.getExtraCustomData().getCompound("PlayerPersisted").getDouble(${input$tagName}))

@@ -1,19 +1,4 @@
-entity dies global trigger (Do not remove yet)
-entity attacked global trigger
-entity hurt global trigger
-block_inv_clear_slot.java.ftl
-block_inv_get_amount_inslot.java.ftl
-block_inv_get_item_inslot.java.ftl
-block_inv_remove_items.java.ftl
-block_inv_set_items.java.ftl
-block.java.ftl (Unless other changes are made to them)
-block.definition.yaml (Unless other changes are made to them)
 player_left_click_block.java.ftl
 player_right_click_block.java.ftl
-Global Variables and all variables
-End biomes
-Entity inv get/set procedures
-chat_sent / command_executed triggers
-player joins/leaves world triggers
-world_send_chat.java.ftl
-button templates
+
+

@@ -65,7 +65,9 @@ base_templates:
 - template: modbase/mixins.json.ftl
   writer: file
   name: "@RESROOT/@modid.mixins.json"
-  condition: ${w.hasElementsOfBaseType("item")}
+  deleteWhenConditionFalse: true
+- template: mixins/repairitemrecipemixin.java.ftl
+  name: "@SRCROOT/@BASEPACKAGEPATH/mixins/@JavaModNameRepairItemRecipeMixin.java"
 - template: modbase/.accesswidener.ftl
   writer: file
   name: "@RESROOT/@modid.accesswidener"

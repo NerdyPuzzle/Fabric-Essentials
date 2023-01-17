@@ -4,7 +4,7 @@
   "weight": 3000,
   "info": {
     "name": "Fabric Essentials",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "description": "Ports Forge features to Fabric",
     "author": "NerdyPuzzle, Kleiders",
 	"updateJSONURL": "https://raw.githubusercontent.com/NerdyPuzzle/Fabric-Essentials/main/update.json",

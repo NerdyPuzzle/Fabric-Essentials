@@ -72,7 +72,6 @@ public class ${JavaModName} implements ModInitializer {
 			if (handler.getPlayer().getExtraCustomData().getCompound("PlayerPersisted").isEmpty()) {
 				handler.getPlayer().getExtraCustomData().put("PlayerPersisted", new CompoundTag());
 			}
-			${JavaModName}.LOGGER.info(handler.getPlayer().getExtraCustomData());
 		});
 	}
 }

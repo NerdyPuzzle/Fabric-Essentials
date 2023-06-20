@@ -1,1 +1,0 @@
-(${input$entity}.getExtraCustomData().getString(${input$tagName}))

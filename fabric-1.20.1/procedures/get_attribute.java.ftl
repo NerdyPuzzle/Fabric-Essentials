@@ -1,1 +1,0 @@
-((LivingEntity) ${input$entity}).getAttribute(${field$attribute}).getBaseValue()

@@ -1,1 +1,0 @@
-removalreason.equals(Entity.RemovalReason.${field$reason})

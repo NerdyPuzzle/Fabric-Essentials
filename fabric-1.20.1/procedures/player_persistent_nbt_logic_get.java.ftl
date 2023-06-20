@@ -1,0 +1,1 @@
+(${input$entity}.getExtraCustomData().getCompound("PlayerPersisted").getBoolean(${input$tagName}))

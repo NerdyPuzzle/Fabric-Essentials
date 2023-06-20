@@ -1,0 +1,1 @@
+${input$entity}.getExtraCustomData().putDouble(${input$tagName}, ${input$tagValue});

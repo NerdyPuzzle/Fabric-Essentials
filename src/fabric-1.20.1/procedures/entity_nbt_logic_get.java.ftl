@@ -1,0 +1,1 @@
+(${input$entity}.getExtraCustomData().getBoolean(${input$tagName}))
